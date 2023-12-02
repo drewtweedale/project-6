@@ -225,9 +225,9 @@
                               if (c_dist) {
                                  // Construct a dictionary
                                  item_json = {
-                                    "km": c_dist, 
-                                    "open": o_time,
-                                    "close": c_time
+                                    "distance": c_dist, 
+                                    "open_time": o_time,
+                                    "close_time": c_time
                                  }
                                  // Push to list
                                  console.log("Items pushed:", item_json)
@@ -269,7 +269,6 @@
                               if (data.status == 1) {
                                  console.log("Successfully inserted! Response: ", data);
                                  $('.control').each(function() {
-                                    console.log("Inside the loop!")
                                     var item = $(this);
                                     var km = item.find("input[name='km']");
                                     var o_time = item.find("input[name='open']");
@@ -330,9 +329,9 @@
                                        litem.find("input[name='close']").val('');
                                        // Check if we're already done?
                                        if (index < num_items) {
-                                          litem.find("input[name='km']").val(items[index].km);
-                                          litem.find("input[name='open']").val(items[index].open);
-                                          litem.find("input[name='close']").val(items[index].close);
+                                          litem.find("input[name='km']").val(items[index].distance);
+                                          litem.find("input[name='open']").val(items[index].open_time);
+                                          litem.find("input[name='close']").val(items[index].close_time);
                                        }
                                     });
                               }

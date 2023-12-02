@@ -17,3 +17,4 @@ class BrevetsResource(Resource):
         input_json = request.json
         result = Brevet(**input_json).save()
         return {'_id': str(result.id)}, 200
+    
